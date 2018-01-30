@@ -1,0 +1,133 @@
+body {
+	background-color: $backgroundBody;
+}
+
+@mixin content($background) {
+	background-color: $background;
+	width: 71%;
+	margin: 0 auto;
+	padding:15px;
+}
+
+@mixin displayWidth($width,$display) {
+	display: $display;
+	width: $width;
+}
+
+@mixin colorWithTextTransform($color,$textTransform) {
+	color: $color;
+	text-transform: $textTransform;
+}
+
+#content {
+	@include content($background:$backgroundContent);
+	color:$textColorP;
+	h1 {
+		@include colorWithTextTransform($color:$mainColor,$textTransform:$textTransformH);
+		margin-top: 0;
+		text-align: center;
+	}
+
+	h2 {
+		color:$mainColor;
+	}
+
+	a {
+		color:$linkColor;
+	}
+
+	.brief { 
+		float: $floatBrief;
+		background-color: $backgroundBrief;
+		width: $widthBrief;
+		padding: $paddingBrief;
+		margin:$marginBrief;
+		color:#000;
+	}
+	img {
+		border: 3px solid $backgroundContent;
+		outline: 2px solid $mainColor;
+
+		&.img-left {
+			float: left;
+			margin-right:20px;
+		}
+
+		&.img-right {
+			float: right;
+			margin-left:20px;
+		}
+	}
+
+	table {
+		border-collapse: collapse;
+		caption {
+			text-align: right;
+			color:#000;
+		}
+
+		th {
+			text-transform: uppercase;
+			font-weight: normal;
+			text-align: left;
+			padding:10px 15px 10px 15px;
+			border-right:1px solid #fff;
+			background-color: $backgroundTh;
+			color:#000;
+
+			&:last-child {
+				border-right:none;
+			}
+		}
+		tr {
+			border-bottom:$backrgroundBorderTr;
+			background-color: $backgroundTr;
+		}
+
+		td {
+			padding:10px 15px 10px 15px;
+		}
+	}
+
+	form {
+		div {
+			@include displayWidth($width: 100%,$display:flex);
+			justify-content: space-around;
+		}
+		div.w-50 {
+			@include displayWidth($width: 50%,$display:flex);
+			flex-direction: column;
+		}
+
+		div.w-50:last-child {
+			margin-left: 15px;
+		}
+
+		label {
+			@include colorWithTextTransform($color:$labelColor,$textTransform:uppercase);
+		}
+
+		input,textarea {
+			margin: 4px 0 13px -5px;
+			border: 1px solid $borderInput;
+			padding:5px 0 5px 5px;
+		}
+
+		input[type="submit"] {
+			@include colorWithTextTransform($color:$inputSubmit,$textTransform:uppercase);
+			border:1px solid $inputSubmit;
+			background: none;
+			padding:8px 50px;
+			font-size: larger;
+		}
+
+		input[type="text"],
+		input[type="email"], label,textarea {
+			@include displayWidth($width: 100%,$display:block);
+		}
+
+		textarea {
+			resize: vertical;
+		}
+	} 
+}

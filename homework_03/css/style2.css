@@ -1,0 +1,108 @@
+body {
+  background-color: rgba(198, 238, 252, 0.53);
+}
+
+#content {
+  background-color: #3b3b3b;
+  width: 71%;
+  margin: 0 auto;
+  padding: 15px;
+  color: #fff;
+}
+#content h1 {
+  color: #fccd10;
+  text-transform: uppercase;
+  margin-top: 0;
+  text-align: center;
+}
+#content h2 {
+  color: #fccd10;
+}
+#content a {
+  color: #F5C70F;
+}
+#content .brief {
+  float: none;
+  background-color: #FFF178;
+  padding: 15px 0px 15px 15px;
+  margin: 10px 0 30px;
+  color: #000;
+}
+#content img {
+  border: 3px solid #3b3b3b;
+  outline: 2px solid #fccd10;
+}
+#content img.img-left {
+  float: left;
+  margin-right: 20px;
+}
+#content img.img-right {
+  float: right;
+  margin-left: 20px;
+}
+#content table {
+  border-collapse: collapse;
+}
+#content table caption {
+  text-align: right;
+  color: #000;
+}
+#content table th {
+  text-transform: uppercase;
+  font-weight: normal;
+  text-align: left;
+  padding: 10px 15px 10px 15px;
+  border-right: 1px solid #fff;
+  background-color: #94A34E;
+  color: #000;
+}
+#content table th:last-child {
+  border-right: none;
+}
+#content table tr {
+  border-bottom: 1px solid #94A34E;
+  background-color: #677D01;
+}
+#content table td {
+  padding: 10px 15px 10px 15px;
+}
+#content form div {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+#content form div.w-50 {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+}
+#content form div.w-50:last-child {
+  margin-left: 15px;
+}
+#content form label {
+  color: #f5c70f;
+  text-transform: uppercase;
+}
+#content form input, #content form textarea {
+  margin: 4px 0 13px -5px;
+  border: 1px solid #94a34e;
+  padding: 5px 0 5px 5px;
+}
+#content form input[type="submit"] {
+  color: #f5c70f;
+  text-transform: uppercase;
+  border: 1px solid #f5c70f;
+  background: none;
+  padding: 8px 50px;
+  font-size: larger;
+}
+#content form input[type="text"],
+#content form input[type="email"], #content form label, #content form textarea {
+  display: block;
+  width: 100%;
+}
+#content form textarea {
+  resize: vertical;
+}
+
+/*# sourceMappingURL=style2.css.map */
