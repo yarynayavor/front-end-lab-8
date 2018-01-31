@@ -80,6 +80,14 @@ a.more {
 	text-align: center;
 	margin:0 auto;
 	font-size: 0.85em;
+	transition: all 1.2s ease;
+	-webkit-transition: all 1.2s ease;
+}
+
+a.more:hover {
+	background:rgba(0,0,0,0.4);
+	transition: all 1.2s ease;
+	-webkit-transition: all 1.2s ease;
 }
 
 div.brand-wrap {
