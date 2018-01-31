@@ -14,7 +14,7 @@
 
 header {
 	background: url("../img/apples.jpg") no-repeat;
-	background-size: 100%;
+	background-size: cover;
 	color:#fff;
 	height: 100vh;
 	font-family: 'Open Sans', sans-serif;
@@ -43,18 +43,30 @@ nav li a {
 	padding:15px 10px;
 }
 
-nav li a:hover {
-	border-bottom: 2px solid #B1C9DB;
-}
-
 nav ul, h1 {
 	margin-top: 30px;
 }
 
 nav li {
 	list-style-type: none;
-	display: inline;
 	padding:0 15px;
+	display: inline-block;
+	position: relative;
+}
+
+nav li:after {
+ 	content: '';
+	display: block;
+	height: 2px;
+	margin: 10px auto;
+	width: 0px;
+	background: transparent;
+	transition: width .5s ease, background-color .5s ease;
+}
+
+nav li:hover:after {
+ 	width: 100%;
+	background: #B1C9DB;
 }
 
 a.more {
@@ -79,7 +91,7 @@ div.brand-wrap {
 }
 
 div.brand {
-	font-size: 2.8em;	
+	font-size: 2.5rem;	
 	letter-spacing: 10px;
 	position: relative;
 }
@@ -89,12 +101,12 @@ div.brand-wrap p {
 }
 
 div.brand span.amp {
-	font-size: 2em;	
+	font-size: 4.5rem;	
 }
 
 div.brand sup.tm {
 	font-size: 0.3em;
 	position: absolute;
-	top:49%;
+	top:45%;
 	letter-spacing: normal;	
 }
