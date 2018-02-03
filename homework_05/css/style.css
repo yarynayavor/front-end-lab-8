@@ -1,0 +1,300 @@
+/* Mobile first method */
+
+* {
+	margin:0;
+	padding:0;
+}
+
+body {
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+	transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease;
+}
+
+a:hover {
+	transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease;
+}
+
+h3 {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+div.wrapper {
+	width: 100%;
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+header img {
+	width: 100px;
+	padding:10px 0 5px;
+}
+
+header nav {
+	background-color: #EEEEEE;
+}
+
+header nav li:first-child {
+	border-top: 1px solid #CCCCCC;
+}
+
+header nav li {
+	border-bottom: 1px solid #CCCCCC;
+	text-align: left;
+	padding:10px 0 10px 20px;
+	list-style-type: none;
+}
+
+header nav li a {
+	color:#464547;
+	text-transform: uppercase;
+	font-weight: 800;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+header nav li a:hover {
+	color:#39C2D7;
+}
+
+div.banner {
+	background: url("../img/banner.jpg") no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 250px;
+	position: relative;
+}
+
+div.banner div.wrapper div {
+	background-color: #39C2D7;
+	color:#fff;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.125em;
+	text-align: left;
+	position: absolute;
+	bottom:15px;
+	left:15px;
+	right: 15px;
+	padding:10px;
+	line-height: 25px;
+}
+
+main div.news {
+	background-color: #CCCCCC;
+	padding: 10px 0;
+	margin:15px 0;
+	color:#333;
+	transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease;
+}
+
+main div.news:hover {
+	cursor: pointer;
+	background-color: #39C2D7;
+	transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease;
+}
+
+main div.news h3,
+main div.news p {
+	text-align: left;
+	padding:0 10px;
+}
+
+main div.news h3 {
+	font-size: 0.975em;
+}
+
+main div.news p {
+	font-size: 0.95em;
+}
+
+main div.news img {
+	width: 80%;
+	margin-bottom: 7px;
+}
+
+footer {
+	background-color: #39C2D7;
+	color:#fff;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.9em;
+	font-weight: bold;
+	padding: 10px 0 20px;
+} 
+
+footer a {
+	text-decoration: underline;
+	color:#fff;
+	display: block;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.9em;
+	padding-top: 5px;
+}
+
+footer p {
+	padding-top: 20px;
+}
+
+
+footer a:hover {
+	text-decoration: none;
+}
+
+/* Tablet styles */
+
+@media only screen and (min-width: 575px) {
+	header nav {
+		background: none;
+	}
+
+	header nav li:first-child {
+		border-top:none;
+	}
+
+	header nav {
+		padding-bottom: 10px;
+	}
+
+	header nav li {
+		border-bottom:none;
+		text-align: center;
+		display: inline-block;
+		padding:10px 0 10px 10px;
+	}
+
+	header nav li a{
+		font-size: 0.77em;
+		font-weight: 800;
+		padding-left: 0;
+	}
+
+	div.banner  {
+		height: 360px;
+	}
+
+	div.banner div.wrapper div {
+		background-color: transparent;
+		margin: 0 auto;
+		font-size: 1.2em;
+		text-align: center;
+		top:25px;
+		line-height: 20px;
+		width:60%;
+	}
+
+	main div.container  {
+		display: grid;
+		margin: 15px auto;
+		grid-template-columns: 1fr 1fr;
+		width: 95%;
+		grid-gap: 15px;
+	}
+
+	main div.news {
+		margin:0;
+	}
+
+	main div.news img {
+		width: 75%;
+	}
+
+	main div.news h3 {
+		font-size: 0.72em;
+	}
+
+	main div.news p {
+		font-size: 0.65em;
+	}
+
+	footer a:first-child {
+		padding-left:0;
+	}
+
+	footer a {
+		display: inline-block;
+		padding-left:25px;
+	}
+}
+
+/* Desktop styles */
+
+@media only screen and (min-width: 900px) {
+
+	header {
+		padding:10px 0;
+	}
+
+	header div.wrapper{
+		display: flex;
+		justify-content: flex-start;
+	}
+
+	header div.wrapper img {
+		height: 40px;
+		margin-right: 20px;
+	}
+
+	header nav li {
+		padding:16px 0 10px 15px;
+	}
+
+	header nav li a{
+		font-size: 0.9em;
+		font-weight: 800;
+		padding-left: 0;
+	}
+	div.banner  {
+		background-position: center top;
+	}
+
+	div.banner div.wrapper div {
+		position: static;
+		padding-top: 60px;
+		font-size: 2em;
+		text-align: left;
+		margin-left:0;
+		padding-left: 0;
+		line-height: 35px;
+		width:30%;
+	}
+
+	main div.container  {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+
+	main div.news img {
+		width: 90%;
+	}
+
+	main div.news h3,
+	main div.news p {
+		padding-left: 15px;
+	}
+
+	main div.news h3 {
+		font-size: 1em;
+	}
+
+	main div.news p {
+		font-size: 1em;
+	}
+
+	footer div.wrapper {
+		display: flex;
+		justify-content: flex-start;
+	}
+
+	footer a {
+		display: inline-block;
+	}
+
+	footer p {
+		padding-left: 25px;
+		padding-top: 5px;
+	}
+}
