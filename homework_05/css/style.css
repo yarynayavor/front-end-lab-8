@@ -86,7 +86,7 @@ div.banner div.wrapper div {
 main div.news {
 	background-color: #CCCCCC;
 	padding: 10px 0;
-	margin:15px 0;
+	margin:15px;
 	color:#333;
 	transition: all 0.5s ease;
 	-webkit-transition: all 0.5s ease;
