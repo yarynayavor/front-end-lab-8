@@ -1,5 +1,4 @@
 /* Mobile first method */
-
 * {
 	margin:0;
 	padding:0;
@@ -7,9 +6,11 @@
 
 body {
 	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 a {
+	font-family: Arial, Helvetica, sans-serif;
 	text-decoration: none;
 	transition: all 0.5s ease;
 	-webkit-transition: all 0.5s ease;
@@ -18,10 +19,6 @@ a {
 a:hover {
 	transition: all 0.5s ease;
 	-webkit-transition: all 0.5s ease;
-}
-
-h3 {
-	font-family: Arial, Helvetica, sans-serif;
 }
 
 div.wrapper {
@@ -54,7 +51,6 @@ header nav li a {
 	color:#464547;
 	text-transform: uppercase;
 	font-weight: 800;
-	font-family: Arial, Helvetica, sans-serif;
 }
 
 header nav li a:hover {
@@ -72,7 +68,6 @@ div.banner {
 div.banner div.wrapper div {
 	background-color: #39C2D7;
 	color:#fff;
-	font-family: Arial, Helvetica, sans-serif;
 	font-size: 1.125em;
 	text-align: left;
 	position: absolute;
@@ -121,7 +116,6 @@ main div.news img {
 footer {
 	background-color: #39C2D7;
 	color:#fff;
-	font-family: Arial, Helvetica, sans-serif;
 	font-size: 0.9em;
 	font-weight: bold;
 	padding: 10px 0 20px;
@@ -131,7 +125,6 @@ footer a {
 	text-decoration: underline;
 	color:#fff;
 	display: block;
-	font-family: Arial, Helvetica, sans-serif;
 	font-size: 0.9em;
 	padding-top: 5px;
 }
@@ -139,7 +132,6 @@ footer a {
 footer p {
 	padding-top: 20px;
 }
-
 
 footer a:hover {
 	text-decoration: none;
@@ -281,7 +273,11 @@ footer a:hover {
 	}
 
 	main div.news p {
-		font-size: 1em;
+		font-size: 0.9em;
+	}
+
+	footer {
+		padding: 15px 0;
 	}
 
 	footer div.wrapper {
