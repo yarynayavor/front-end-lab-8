@@ -9,7 +9,7 @@ if(natural && number<=maxFloors) {
 		for(let j=0;j<=(number-i);j++){
 				spaces=" ".repeat(j*3);
 			}
-		console.log(spaces+brick.repeat(i-1)+brick.repeat(i));
+		console.log(spaces+brick.repeat(i-1)+brick.repeat(i)+"\n");
 	}
 } else {
 	console.log("Incorrect data. You can enter only natural number from 1 to 20.");
