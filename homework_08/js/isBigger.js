@@ -1,1 +1,1 @@
-let isBigger=(p,s)=> p>s;
+let isBigger = (p, s) => p > s;
