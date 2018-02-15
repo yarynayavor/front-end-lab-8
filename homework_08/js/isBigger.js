@@ -1,2 +1,1 @@
-/* shortest solution that I found :*/ 
-let isBigger=(a,b)=> a>b;
+let isBigger=(p,s)=> p>s;
