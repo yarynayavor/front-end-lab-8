@@ -1,0 +1,1 @@
+let forEach=(array, diferentFunction)=> array.forEach(diferentFunction);
