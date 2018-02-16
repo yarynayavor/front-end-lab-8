@@ -1,1 +1,6 @@
- let forEach = (array, differentFunction) => Array.from(array).forEach(differentFunction);
+ let forEach = (array, differentFunction) => {
+     for (var i = 0; i < array.length; i++) {
+         differentFunction(array[i])
+     }
+     return array;
+ }
