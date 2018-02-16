@@ -1,1 +1,1 @@
-let forEach=(array, diferentFunction)=> array.forEach(diferentFunction);
+ let forEach = (array, differentFunction) => Array.from(array).forEach(differentFunction);
