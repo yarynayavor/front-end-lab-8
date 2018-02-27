@@ -39,6 +39,10 @@ li div.main:hover {
 	padding: 0;
 }
 
-li ul {
+/*li ul {
+	display: none;
+}*/
+
+.hide {
 	display: none;
 }
