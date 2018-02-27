@@ -1,0 +1,44 @@
+* {
+	margin:0;
+	padding: 0;
+}
+
+body {
+	font-size: 18px;
+}
+
+li {
+	list-style-type: none;
+	padding-left: 30px;
+	margin-bottom: 1px;
+}
+
+li div.title{
+	display: inline-block;
+}
+
+li div.main:hover {
+	background: #dbdbdb;
+	transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease;
+	cursor: pointer;
+}
+
+.folder-close {
+	color:orange;
+	font-size: 18px;
+}
+
+.drive {
+	color:#b7b7b7;
+	font-size: 18px;
+}
+
+.empty li {
+	font-style: italic;
+	padding: 0;
+}
+
+li ul {
+	display: none;
+}
