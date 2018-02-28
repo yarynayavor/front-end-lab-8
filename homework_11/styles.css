@@ -7,6 +7,10 @@ body {
 	font-size: 18px;
 }
 
+ul {
+	display: none;
+}
+
 li {
 	list-style-type: none;
 	padding-left: 30px;
@@ -24,6 +28,11 @@ li div.main:hover {
 	cursor: pointer;
 }
 
+ul:first-child,
+.show>ul{
+	display: block;
+}
+
 .folder-close {
 	color:orange;
 	font-size: 18px;
@@ -37,12 +46,4 @@ li div.main:hover {
 .empty li {
 	font-style: italic;
 	padding: 0;
-}
-
-/*li ul {
-	display: none;
-}*/
-
-.hide {
-	display: none;
 }
