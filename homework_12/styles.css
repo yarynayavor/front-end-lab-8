@@ -1,0 +1,90 @@
+body {
+	font-family: serif;
+	background: #222124;
+}
+
+h1,h2 {
+	color:#A09E86;
+}
+
+h2 {
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	color:#D6D1B6;
+	text-transform: uppercase;
+	font-weight: bold;
+	display: inline-block;
+	transition: all 0.7s ease;
+	-webkit-transition: all 0.7s ease;
+}
+
+a:hover {
+	background: #303030;
+	transition: all 0.7s ease;
+	-webkit-transition: all 0.7s ease;
+}
+
+img.preview {
+	display: block;
+	width: 200px;
+}
+
+div.tanks-thumbnails {
+	width: 200px;
+}
+
+div.tank-model-preview {
+	padding: 10px 5px;
+	text-align: center;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+img.country {
+	width: 20px;
+}
+
+span.level {
+	color:#879385;
+}
+
+span {
+	margin-left: 5px;
+	font-size: 1.2em;
+}
+
+img.country-details {
+	width: 40px;
+}
+
+span.span-model-details {
+	text-transform: uppercase;
+	margin-right: 5px;
+}
+
+div.div-details {
+	display: grid;
+	grid-template-columns:40% 60%;
+}
+
+a.back {
+	color:#A09E86;
+	text-transform: none;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+	margin-top: 20px;
+}
+
+td {
+	border: 1px solid #D6D2A7;
+	text-align: left;
+	padding: 10px;
+	color:#D6D2A7;
+}
