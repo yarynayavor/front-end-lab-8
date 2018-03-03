@@ -3,8 +3,12 @@ body {
 	background: #222124;
 }
 
-h1 {
+h1,h2 {
 	color:#A09E86;
+}
+
+h2 {
+	margin: 0;
 }
 
 a {
@@ -51,4 +55,36 @@ span.level {
 span {
 	margin-left: 5px;
 	font-size: 1.2em;
+}
+
+img.country-details {
+	width: 40px;
+}
+
+span.span-model-details {
+	text-transform: uppercase;
+	margin-right: 5px;
+}
+
+div.div-details {
+	display: grid;
+	grid-template-columns:40% 60%;
+}
+
+a.back {
+	color:#A09E86;
+	text-transform: none;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+	margin-top: 20px;
+}
+
+td {
+	border: 1px solid #D6D2A7;
+	text-align: left;
+	padding: 10px;
+	color:#D6D2A7;
 }
