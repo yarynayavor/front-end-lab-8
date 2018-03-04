@@ -1,11 +1,16 @@
 var rootNode = document.getElementById("root");
 let divMain = document.createElement('div');
 
+function clear(item) {
+    while (item.firstChild) {
+        item.removeChild(item.firstChild);
+    }
+    return item;
+}
+
 function getDetails(item, div) {
     let h1 = document.createElement('h1');
-    while (div.firstChild) {
-        div.removeChild(div.firstChild);
-    }
+    clear(div);
     div.classList.remove('thumbnails');
     div.classList.add('tank-details');
 
@@ -86,9 +91,7 @@ function getPreviewTree(elements, div) {
     h1.textContent = "Most popular tanks";
     if (div.classList.contains("tank-details")) {
         div.classList.remove('tank-details');
-        while (div.firstChild) {
-            div.removeChild(div.firstChild);
-        }
+        clear(div);
     }
     div.classList.add('thumbnails');
     div.appendChild(h1);
@@ -146,13 +149,12 @@ function hashPlay(rootN) {
         tanks.forEach(item => {
             let k = item.model.replace(/\s/g, "-");
             if (k === location.hash.slice(1)) {
-                let res = getDetails(item, divMain);
-                rootN.appendChild(res);
+                rootN.appendChild(getDetails(item, divMain));
             }
         });
 
         let back = document.getElementById("backToList");
-        back.addEventListener("click", function(e) {
+        back.addEventListener("click", function() {
             window.location.href.split('#')[0];
         });
     }
