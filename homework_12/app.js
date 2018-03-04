@@ -1,8 +1,7 @@
 var rootNode = document.getElementById("root");
 let divMain = document.createElement('div');
 
-
-function getDetails(elements, div) {
+function getDetails(item, div) {
     let h1 = document.createElement('h1');
     while (div.firstChild) {
         div.removeChild(div.firstChild);
@@ -14,24 +13,23 @@ function getDetails(elements, div) {
     divTankInfo.classList.add("tank-model-details");
 
     let imgCountry = document.createElement('img');
-    imgCountry.setAttribute("src", `${elements.country_image}`);
-    imgCountry.setAttribute("alt", `${elements.country}`);
+    imgCountry.setAttribute("src", `${item.country_image}`);
+    imgCountry.setAttribute("alt", `${item.country}`);
     imgCountry.classList.add("country-details");
-    imgCountry.setAttribute("title", `${elements.country}`);
+    imgCountry.setAttribute("title", `${item.country}`);
 
     let spanLevel = document.createElement('span');
-    spanLevel.textContent = "(level " + elements.level + ")";
+    spanLevel.textContent = "(level " + item.level + ")";
     spanLevel.classList.add("level-details");
 
     let spanModel = document.createElement('span');
-    spanModel.textContent = elements.model;
+    spanModel.textContent = item.model;
     spanModel.classList.add("span-model-details");
-    spanModel.setAttribute("title", `${elements.model}`);
+    spanModel.setAttribute("title", `${item.model}`);
 
     divTankInfo.appendChild(imgCountry);
     divTankInfo.appendChild(spanModel);
     divTankInfo.appendChild(spanLevel);
-
 
     h1.appendChild(divTankInfo);
     div.appendChild(h1);
@@ -50,12 +48,12 @@ function getDetails(elements, div) {
     divCharacter.appendChild(hC);
 
     let table = document.createElement('table');
-    for (p in elements.details) {
+    for (p in item.details) {
         let tr = document.createElement('tr');
         let td1 = document.createElement('td');
         let td2 = document.createElement('td');
         td1.textContent = p.replace(/[_]/g, " ");
-        td2.textContent = elements.details[p];
+        td2.textContent = item.details[p];
         tr.appendChild(td1);
         tr.appendChild(td2);
         table.appendChild(tr);
@@ -63,8 +61,8 @@ function getDetails(elements, div) {
     divCharacter.appendChild(table);
 
     let imgPreview = document.createElement('img');
-    imgPreview.setAttribute("src", `${elements.preview}`);
-    imgPreview.setAttribute("alt", `${elements.model}`);
+    imgPreview.setAttribute("src", `${item.preview}`);
+    imgPreview.setAttribute("alt", `${item.model}`);
     imgPreview.classList.add("preview-details");
     divPreview.appendChild(imgPreview);
 
@@ -77,7 +75,6 @@ function getDetails(elements, div) {
     a.setAttribute("id", "backToList");
     a.classList.add("back");
     a.textContent = "Back to list view";
-
 
     div.appendChild(a);
 
@@ -151,7 +148,6 @@ function hashPlay(rootN) {
             if (k === location.hash.slice(1)) {
                 let res = getDetails(item, divMain);
                 rootN.appendChild(res);
-                // console.log(k);
             }
         });
 
@@ -162,7 +158,7 @@ function hashPlay(rootN) {
     }
     return rootN;
 }
-//let result = getPreviewTree(tanks, divMain);
+
 window.addEventListener('load', function() {
     hashPlay(rootNode);
 });
