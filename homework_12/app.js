@@ -153,7 +153,7 @@ function hashPlay(rootN) {
 
         let back = document.getElementById("backToList");
         back.addEventListener("click", function(e) {
-            location.hash.slice(1) = '';
+            window.location.href.split('#')[0];
         });
     }
     return rootN;
